@@ -4,4 +4,4 @@ export function formatMessageTime(date) {
       minute: "2-digit",
       hour12: false,
     });
-  }
+}
