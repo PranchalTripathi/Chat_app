@@ -7,7 +7,7 @@ export default defineConfig({
   build:{
     rollupOptions:{
   plugins: [react()],
-  external:['Socket.io-client'],
+  external:['socket.io-client'],
 },
   },
 });
