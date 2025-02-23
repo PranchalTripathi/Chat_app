@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from "./components/Navbar";
 
 import HomePage from "./pages/HomePage";
@@ -34,9 +35,8 @@ const App = () => {
     );
 
   return (
-    <div data-theme={theme}>
+    <div>
       <Navbar />
-
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
         <Route path="/signup" element={!authUser ? <SignUpPage /> : <Navigate to="/" />} />
@@ -44,8 +44,7 @@ const App = () => {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
       </Routes>
-
-      <Toaster />
+      <Toaster /> 
     </div>
   );
 };
